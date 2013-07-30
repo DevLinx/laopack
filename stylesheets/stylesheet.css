@@ -1,12 +1,13 @@
 /*******************************************************************************
 Slate Theme for GitHub Pages
 by Jason Costello, @jsncostello
+
+Modified by SWLinx for @DevLinx project pages, 2013
 *******************************************************************************/
 
-@import url(pygment_trac.css);
-
 /*******************************************************************************
-MeyerWeb Reset
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
 *******************************************************************************/
 
 html, body, div, span, applet, object, iframe,
@@ -18,42 +19,54 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
 
-nav {
-  display: inline;
+body {
+	line-height: 1;
 }
 
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
 
 blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
+
+:focus {
+  outline: #C09300 dotted medium;
+}
 
 body {
   box-sizing: border-box;
@@ -104,36 +117,10 @@ p {
   margin: 10px 0 15px 0;
 }
 
-footer p {
-  color: #f2f2f2;
-}
-
 a {
   color: #C09300;
-  outline: none;
   text-decoration: none;  
   text-shadow: none;
-
-  transition: color 0.3s ease;
-  transition: text-shadow 0.3s ease;
-  -webkit-transition: color 0.3s ease;
-  -webkit-transition: text-shadow 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -moz-transition: text-shadow 0.3s ease;
-  -o-transition: color 0.3s ease;
-  -o-transition: text-shadow 0.3s ease;
-  -ms-transition: color 0.3s ease;
-  -ms-transition: text-shadow 0.3s ease;
-}
-
-#main_content a:hover {
-  color: #A17B00;
-  text-shadow: #C09300 0px 0px 2px;
-}
-
-footer a:hover {
-  color: #D5A400;
-  text-shadow: #C09300 0px 0px 2px;
 }
 
 em {
@@ -260,10 +247,15 @@ img {
   max-width: 100%;
 }
 
+footer p {
+  color: #f2f2f2;
+}
+
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
 
+/* Global */
 .outer {
   width: 100%;
 }
@@ -275,6 +267,25 @@ Full-Width Styles
   margin: 0 auto;
 }
 
+.gold_gradient {
+  background-color: #C09300;  
+  background-image: linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+  background-image: -moz-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+  background-image: -webkit-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+  background-image: -ms-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+  background-image: -o-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+}
+
+.black_gradient {
+  background-color: #212121;  
+  background-image: linear-gradient(to top left, #414141 0%, #212121 100%);
+  background-image: -moz-linear-gradient(to top left, #414141 0%, #212121 100%);
+  background-image: -webkit-linear-gradient(to top left, #414141 0%, #212121 100%);
+  background-image: -ms-linear-gradient(to top left, #414141 0%, #212121 100%);
+  background-image: -o-linear-gradient(to top left, #414141 0%, #212121 100%);
+}
+
+/* Header */
 #forkme_banner {
   display: block;
   position: absolute;
@@ -284,6 +295,8 @@ Full-Width Styles
   padding: 10px 50px 10px 10px;
   color: #fff;
   font-weight: 700;
+  text-decoration: none;
+  transition: none;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -368,6 +381,7 @@ Full-Width Styles
   background: url(../images/sprite_download.png) no-repeat top right;
 }
 
+/* Navigation */
 .nav_item {
   margin: 1px 0px;
   padding: 6px 14px;
@@ -380,49 +394,57 @@ Full-Width Styles
   background-repeat: no-repeat;
 }
 
-#nav_bar h6:hover, #forkme_banner:hover {
-  opacity: 0.85;
-}
-
-.gold_gradient {
-  background-color: #C09300;  
-  background-image: linear-gradient(to top left, #C09300 0%, #A17B00 100%);
-  background-image: -moz-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
-  background-image: -webkit-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
-  background-image: -ms-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
-  background-image: -o-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
-}
-
-.black_gradient {
-  background-color: #212121;  
-  background-image: linear-gradient(to top left, #414141 0%, #212121 100%);
-  background-image: -moz-linear-gradient(to top left, #414141 0%, #212121 100%);
-  background-image: -webkit-linear-gradient(to top left, #414141 0%, #212121 100%);
-  background-image: -ms-linear-gradient(to top left, #414141 0%, #212121 100%);
-  background-image: -o-linear-gradient(to top left, #414141 0%, #212121 100%);
-}
-
 #nav_bar {
   position: absolute;
   left: 0;
   margin-top: 30px;
 }
 
-#main_content_wrap {
+#nav_bar h6:hover, #forkme_banner:hover {
+  opacity: 0.85;
+}
+
+/* Content */
+#content_wrap {
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }
 
-#main_content {
+#content {
   padding-top: 30px;
+  
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
 }
 
+#content a:hover {
+  color: #A17B00;  
+  text-shadow: #C09300 0px 0px 1px;
+  text-decoration: underline;
+}
+
+/* Footer */
 #footer_wrap {
   background: #212121;
 }
 
+#footer_wrap a {
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+}
 
+footer a:hover {
+  color: #D5A400;
+  text-shadow: #C09300 0px 0px 1px;
+  text-decoration: underline;
+}
 
 /*******************************************************************************
 Small Device Styles
