@@ -35,6 +35,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+nav {
+  display: inline;
+}
+
 ol, ul {
   list-style: none;
 }
@@ -362,6 +366,46 @@ Full-Width Styles
 
 .tar_download_link:hover {
   background: url(../images/sprite_download.png) no-repeat top right;
+}
+
+.nav_item {
+  margin: 1px 0px;
+  padding: 6px 14px;
+  
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-repeat: no-repeat;
+}
+
+#nav_bar h6:hover, #forkme_banner:hover {
+  opacity: 0.85;
+}
+
+.gold_gradient {
+  background-color: #C09300;  
+  background-image: linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+  background-image: -moz-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+  background-image: -webkit-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+  background-image: -ms-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+  background-image: -o-linear-gradient(to top left, #C09300 0%, #A17B00 100%);
+}
+
+.black_gradient {
+  background-color: #212121;  
+  background-image: linear-gradient(to top left, #414141 0%, #212121 100%);
+  background-image: -moz-linear-gradient(to top left, #414141 0%, #212121 100%);
+  background-image: -webkit-linear-gradient(to top left, #414141 0%, #212121 100%);
+  background-image: -ms-linear-gradient(to top left, #414141 0%, #212121 100%);
+  background-image: -o-linear-gradient(to top left, #414141 0%, #212121 100%);
+}
+
+#nav_bar {
+  position: absolute;
+  left: 0;
+  top: 240px;
 }
 
 #main_content_wrap {
