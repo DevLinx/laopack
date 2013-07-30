@@ -405,7 +405,7 @@ Full-Width Styles
 #nav_bar {
   position: absolute;
   left: 0;
-  top: 240px;
+  margin-top: 30px;
 }
 
 #main_content_wrap {
@@ -415,7 +415,7 @@ Full-Width Styles
 }
 
 #main_content {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 #footer_wrap {
