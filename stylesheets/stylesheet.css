@@ -413,7 +413,9 @@ Full-Width Styles
 
 #content {
   padding-top: 30px;
-  
+} 
+
+#content a {  
   transition: 0.3s ease;
   -webkit-transition: 0.3s ease;
   -moz-transition: 0.3s ease;
@@ -440,7 +442,7 @@ Full-Width Styles
   -ms-transition: 0.3s ease;
 }
 
-footer a:hover {
+#footer_wrap a:hover {
   color: #D5A400;
   text-shadow: #C09300 0px 0px 1px;
   text-decoration: underline;
